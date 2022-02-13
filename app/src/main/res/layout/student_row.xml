@@ -25,8 +25,8 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@color/teal_700"
-                android:contentDescription="Profile Image"
-                android:src="@drawable/ic_baseline_person_24"/>
+                android:src="@drawable/ic_baseline_person_24"
+                android:contentDescription="@string/student_image" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -38,7 +38,6 @@
                     android:id="@+id/tvStudentName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Student Name"
                     android:textSize="22sp"
                     android:textStyle="bold"/>
 
@@ -46,7 +45,6 @@
                     android:id="@+id/tvStudentAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Student's Address"
                     android:textSize="16sp"
                     android:textStyle="bold"/>
             </LinearLayout>

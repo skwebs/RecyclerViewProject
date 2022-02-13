@@ -21,37 +21,9 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerViewStudent.setLayoutManager(new LinearLayoutManager(this));
 
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
-        arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
+        for(int i = 0; i < 10000; i++){
+            arrStudent.add(new StudentModel(R.drawable.ic_baseline_person_24, "Satish", "Bihar"));
+        }
 
         RecyclerStudentAdapter recyclerStudentAdapter = new RecyclerStudentAdapter(this, arrStudent);
         recyclerViewStudent.setAdapter(recyclerStudentAdapter);
