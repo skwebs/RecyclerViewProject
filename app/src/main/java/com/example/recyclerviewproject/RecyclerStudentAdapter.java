@@ -14,18 +14,16 @@ import java.util.ArrayList;
 
 public class RecyclerStudentAdapter extends RecyclerView.Adapter<RecyclerStudentAdapter.ViewHolder> {
 
-    final Context context;
     final ArrayList<StudentModel> arrStudent;
 
-    RecyclerStudentAdapter(Context context, ArrayList<StudentModel> arrStudent) {
-        this.context = context;
+    RecyclerStudentAdapter(ArrayList<StudentModel> arrStudent) {
         this.arrStudent = arrStudent;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.student_row, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.student_row, parent, false);
         return new ViewHolder(view);
     }
 
