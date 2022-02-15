@@ -1,6 +1,5 @@
 package com.example.recyclerviewproject;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,10 +13,10 @@ import java.util.ArrayList;
 
 public class RecyclerStudentAdapter extends RecyclerView.Adapter<RecyclerStudentAdapter.ViewHolder> {
 
-    final ArrayList<StudentModel> arrStudent;
+    final ArrayList<StudentModel> studentList;
 
-    RecyclerStudentAdapter(ArrayList<StudentModel> arrStudent) {
-        this.arrStudent = arrStudent;
+    RecyclerStudentAdapter(ArrayList<StudentModel> studentList) {
+        this.studentList = studentList;
     }
 
     @NonNull
@@ -29,14 +28,14 @@ public class RecyclerStudentAdapter extends RecyclerView.Adapter<RecyclerStudent
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.ivStudentImg.setImageResource(arrStudent.get(position).img);
-        holder.tvStudentName.setText(arrStudent.get(position).name);
-        holder.tvStudentAddress.setText(arrStudent.get(position).address+" [Id No. : "+position+"]");
+        holder.ivStudentImg.setImageResource(studentList.get(position).img);
+        holder.tvStudentName.setText(studentList.get(position).name);
+        holder.tvStudentAddress.setText(studentList.get(position).email +" [Id No. : "+position+"]");
     }
 
     @Override
     public int getItemCount() {
-        return arrStudent.size();
+        return studentList.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    final ArrayList<StudentModel> arrStudent = new ArrayList<>();
+    final ArrayList<StudentModel> studentList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +22,10 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewStudent.setLayoutManager(new LinearLayoutManager(this));
 
         for(int i = 0; i < 10000; i++){
-            arrStudent.add(new StudentModel(R.drawable.ama_bw_128, "Satish", "Bihar"));
+            studentList.add(new StudentModel(R.drawable.ama_bw_128, "Satish", "satish@anshumemorial.in"));
         }
 
-        RecyclerStudentAdapter recyclerStudentAdapter = new RecyclerStudentAdapter(arrStudent);
+        RecyclerStudentAdapter recyclerStudentAdapter = new RecyclerStudentAdapter(studentList);
         recyclerViewStudent.setAdapter(recyclerStudentAdapter);
 
     }
