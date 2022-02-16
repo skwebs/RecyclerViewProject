@@ -1,8 +1,8 @@
 package com.example.recyclerviewproject;
 
 public class UserModel {
-    String name;
-    String email;
+    final String name;
+    final String email;
 
     public UserModel(String name, String email) {
         this.name = name;

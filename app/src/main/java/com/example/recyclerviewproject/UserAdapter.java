@@ -39,8 +39,10 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
         return userList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tvUserName, tvUserEmail, tvSerialNum;
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        final TextView tvUserName;
+        final TextView tvUserEmail;
+        final TextView tvSerialNum;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvUserName = itemView.findViewById(R.id.tv_user_name);
