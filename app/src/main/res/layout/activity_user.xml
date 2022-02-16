@@ -4,19 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingHorizontal="10dp"
-    tools:context=".MainActivity">
+    tools:context=".UserActivity">
 
     <Button
-        android:id="@+id/btn_user_page"
+        android:id="@+id/btn_main_page"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="User Page"/>
+        android:text="Main Page"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewStudent"
-        android:layout_below="@+id/btn_user_page"
+        android:id="@+id/user_recycler_view"
+        android:layout_below="@+id/btn_main_page"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
+        android:layout_height="match_parent"/>
 
 </RelativeLayout>
