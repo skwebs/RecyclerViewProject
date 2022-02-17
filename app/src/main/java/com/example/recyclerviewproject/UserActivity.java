@@ -61,7 +61,6 @@ public class UserActivity extends AppCompatActivity {
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
-                        userList.add(new UserModel("Satish", "satish@anshumemorial.in"));
                     }
 
                     userRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
