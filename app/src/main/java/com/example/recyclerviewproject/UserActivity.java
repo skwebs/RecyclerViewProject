@@ -1,9 +1,8 @@
 package com.example.recyclerviewproject;
 
-import android.content.Intent;
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,8 +16,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class UserActivity extends AppCompatActivity {
+
+
 
     private static final String TAG = "UserActivity:";
     final ArrayList<UserModel> userList = new ArrayList<>();
@@ -27,23 +29,21 @@ public class UserActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Users List");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
 
         requestQueue = VolleySingleton.getInstance(this).getRequestQueue();
         userRecyclerView = findViewById(R.id.user_recycler_view);
         userRecyclerView.setHasFixedSize(true);
-        Button btnMainPage = findViewById(R.id.btn_main_page);
-        btnMainPage.setOnClickListener(view -> {
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-        });
 
         getUserDetails();
     }
 
     private void getUserDetails() {
-
+        ProgressDialog progressDialog = ProgressDialog.show(this,null,"Please wait");
         String url = "https://anshumemorial.in/lv8_api/api/users";
         JsonArrayRequest jsonObjectRequest = new JsonArrayRequest(Request.Method.GET, url, null,
                 response -> {
@@ -68,7 +68,14 @@ public class UserActivity extends AppCompatActivity {
                     UserAdapter userAdapter = new UserAdapter(this, userList);
                     userRecyclerView.setAdapter(userAdapter);
 
-                }, Throwable::printStackTrace);
+                    if(progressDialog!=null && progressDialog.isShowing())
+                        progressDialog.dismiss();
+
+                }, error -> {
+            if(progressDialog!=null && progressDialog.isShowing())
+                progressDialog.dismiss();
+            Log.d(TAG, "getUserDetails: "+error);
+        });
 
         requestQueue.add(jsonObjectRequest);
     }

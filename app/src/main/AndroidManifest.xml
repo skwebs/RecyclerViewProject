@@ -13,7 +13,8 @@
         android:theme="@style/Theme.RecyclerViewProject">
         <activity
             android:name=".UserDetailsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".UserActivity"/>
         <activity
             android:name=".UserActivity"
             android:exported="false"

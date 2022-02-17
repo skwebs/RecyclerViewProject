@@ -12,23 +12,12 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    final ArrayList<StudentModel> studentList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getSupportActionBar().setTitle("Home Page");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        RecyclerView recyclerViewStudent = findViewById(R.id.recyclerViewStudent);
-
-        recyclerViewStudent.setLayoutManager(new LinearLayoutManager(this));
-
-        for(int i = 0; i < 10000; i++){
-            studentList.add(new StudentModel(R.drawable.ama_bw_128, "Satish", "satish@anshumemorial.in"));
-        }
-
-        RecyclerStudentAdapter recyclerStudentAdapter = new RecyclerStudentAdapter(studentList);
-        recyclerViewStudent.setAdapter(recyclerStudentAdapter);
 
         Button btnUserPage = findViewById(R.id.btn_user_page);
         btnUserPage.setOnClickListener(view -> {

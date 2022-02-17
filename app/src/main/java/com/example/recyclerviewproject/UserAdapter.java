@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,12 +17,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     Context context;
     final ArrayList<UserModel> userList;
-
-
-//    UserAdapter(ArrayList<UserModel> userList) {
-//        this.userList = userList;
-//    }
-
 
     public UserAdapter(Context context, ArrayList<UserModel> userList) {
         this.context = context;
@@ -72,7 +65,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
             String email = userModel.getEmail();
 
             Log.d(TAG, "onClick: "+position);
-            Toast.makeText(context, "clicked on position no. "+String.valueOf(position), Toast.LENGTH_SHORT).show();
 
             Intent intent = new Intent(context, UserDetailsActivity.class);
             intent.putExtra("name", name);

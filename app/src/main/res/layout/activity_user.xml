@@ -6,15 +6,8 @@
     android:paddingHorizontal="10dp"
     tools:context=".UserActivity">
 
-    <Button
-        android:id="@+id/btn_main_page"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Main Page"/>
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/user_recycler_view"
-        android:layout_below="@+id/btn_main_page"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
