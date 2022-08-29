@@ -12,9 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecyclerViewProject">
         <activity
+            android:name=".UserActivity2"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+        <activity
             android:name=".UserDetailsActivity"
             android:exported="false"
-            android:parentActivityName=".UserActivity"/>
+            android:parentActivityName=".UserActivity" />
         <activity
             android:name=".UserActivity"
             android:exported="false"

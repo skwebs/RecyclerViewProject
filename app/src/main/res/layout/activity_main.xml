@@ -10,6 +10,13 @@
         android:id="@+id/btn_user_page"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="User Page"/>
+        android:text="@string/user_page"/>
+
+    <Button
+        android:id="@+id/btn_user_page2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_user_page"
+        android:text="User Page 2"/>
 
 </RelativeLayout>

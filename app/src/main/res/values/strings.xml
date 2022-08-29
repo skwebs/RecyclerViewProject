@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">RecyclerViewProject</string>
     <string name="student_image">Student Image</string>
+    <string name="user_page">User Page</string>
 </resources>
